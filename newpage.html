@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  
+ /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Navigation bar styles */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background-color: #111;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 16px;
+}
+
+/* Hero section styles */
+.hero {
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+  background-image: url('https://via.placeholder.com/1500x600.png?text=Hero+image');
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+.hero button {
+  padding: 16px 32px;
+  font-size: 24px;
+  background-color: red;
+  color: #fff;
+  border: none;
+}
+
+/* Featured section styles */
+.featured {
+  padding: 32px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.card img {
+  width: 200px;
+  height: 265px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+/* Categories section styles */
+.categories {
+  padding: 32px;
+  background-color: #fff;
+}
+
+.categories h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.categories li {
+  margin-right: 16px;
+}
+
+.categories a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+footer p {
+  margin: 0;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  /* Center the "All rights reserved" message on smaller screens */
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer p {
+    display: block;
+  }
+}
+
+
+
+
+
+/* Add styles for the video overlay */
+#video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: none; /* Hide the video overlay by default */
+}
+
+#video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#close-video-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+#close-video-btn:hover {
+  background-color: black;
+  color: black;
+}
+
+
+  </style>
+   
+   
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">TV Shows</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#mylist">My List</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <!-- Hero section -->
+      <section class="hero">
+        <h1>Filma të pakufizuar, shfaqje televizive dhe më shumë.</h1>
+        <p>Shiko kudo. Anulo në çdo kohë.</p>
+        <button>Fillo</button>
+      </section>
+      
+      
+     <!-- Featured section -->
+<section class="featured">
+  <h2>Të paraqitura</h2>
+  <div id="card1" class="card">
+    <!-- Update the data-src attribute with the URL of the video and add the class 'video-card' to the image tag -->
+    <img data-src="https://youtu.be/JfVOs4VSpmA" class="video-card" src="https://imgs.search.brave.com/BhiQrtT7OOccP5COr8d9gutf5F1T5XL8hcup7LM74jM/rs:fit:1080:1200:1/g:ce/aHR0cHM6Ly9lcy53/ZWIuaW1nMi5hY3N0/YS5uZXQvcGljdHVy/ZXMvMjEvMTIvMDEv/MTIvMDcvMDI0MzMy/My5qcGc" alt="Spider-Man: No Way Home">
+    <h3>Spider-Man: No Way Home</h3>
+    <p>Kësti i fundit në ekskluzivitetin Spider-Man.</p>
+  </div>
+  
+  <!-- Update the image source and alt text for the second card to use the Batman image -->
+  <div class="card">
+    <img style="margin-left: 35px;" data-src="https://youtu.be/mqqft2x_Aa4" class="video-card" src="https://imgs.search.brave.com/NIr2dsHrzE2UI6LMfXgnOEI6F2bQY3blAQyoWLbkstY/rs:fit:600:900:1/g:ce/aHR0cHM6Ly9pbWFn/ZS50bWRiLm9yZy90/L3Avb3JpZ2luYWwv/eTVYdkdmRUxSNUgx/U0FTVmRvV2d3V2Zh/Rm8yLmpwZw" alt="Batman">
+    <h3 style="margin-left: 37px;">THE BATMAN</h3>
+    <p style="margin-left: 35px;">Description of Batman movie</p>
+  </div>
+  
+  <div class="card">
+    <img style="margin-left: 35px;" src="https://via.placeholder.com/200x300.png?text=Image+3" alt="Image 3">
+    <h3 style="margin-left: 37px;">The Batman</h3>
+    <p style="margin-left: 35px;">Description of Batman movie</p>
+  </div>
+</section>
+
+      
+      <!-- Categories section -->
+      <section class="categories">
+        <h2>Browse by category</h2>
+        <ul>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Comedy</a></li>
+          <li><a href="#">Drama</a></li>
+          <li><a href="#">Horror</a></li>
+          <li><a href="#">Romance</a></li>
+          <li><a href="#">Sci-fi</a></li>
+        </ul>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Fake Netflix. All rights reserved.</p>
+    </footer>
+
+    <!-- Add the video overlay element -->
+<div id="video-overlay">
+  <div id="video-container"></div>
+  <!-- Add the "Exit the video" button to close the video overlay -->
+  <button id="close-video-btn">Exit the video</button>
+</div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+  
+
+
+
+<script>
+
+
+// Get the navigation bar element
+var navBar = document.querySelector('nav');
+
+// Add a click event listener to the navigation bar
+navBar.addEventListener('click', function(event) {
+  // Check if the user clicked on the "My List" link
+  if (event.target.getAttribute('href') === '#mylist') {
+    // Prevent the default link behavior
+    event.preventDefault();
+  
+    // Check if the user has any favorite movies
+    var favoriteMovies = getFavoriteMovies();
+    if (favoriteMovies.length === 0) {
+      // Display a message if the user has no favorite movies
+      alert('You have no favorite movies!');
+    } else {
+      // Open the My List page if the user has favorite movies
+      window.location.href = event.target.getAttribute('href');
+    }
+  }
+});
+
+// Function to get the user's favorite movies
+function getFavoriteMovies() {
+  // In this example, we'll just return an empty array
+  // Replace this with real code to get the user's favorite movies from a database or API
+  return [];
+}
+
+
+
+
+// Add a click event listener to the featured section
+$('.featured').on('click', '.video-card', function() {
+  // Get the data-src attribute value of the clicked image
+  const videoSrc = $(this).data('src');
+  
+  // Create an iframe element with the YouTube player embed URL and the video ID from the videoSrc variable
+  const videoHtml = `
+    <iframe width="360" height="235" src="https://www.youtube.com/embed/${videoSrc.replace('https://youtu.be/', '')}" frameborder="0" allowfullscreen></iframe>
+  `;
+  
+  // Set the HTML content of the video container to the iframe element
+  $('#video-container').html(videoHtml);
+  
+  // Show the video overlay
+  $('#video-overlay').show();
+});
+
+// Add a click event listener to the red circle icon on the video overlay to close the overlay
+$('#close-video-btn').click(function() {
+  // Clear the HTML content of the video container
+  $('#video-container').html('');
+  
+  // Hide the video overlay
+  $('#video-overlay').hide();
+});
+
+
+
+
+</script>
